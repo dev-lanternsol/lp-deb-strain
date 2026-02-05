@@ -1,0 +1,268 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    background-image: url('background.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    height: 100vh;
+    max-height: 100vh;
+    overflow: hidden;
+    line-height: 1.6;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4vh 8vw;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.35);
+    z-index: -1;
+}
+
+/* Header Section */
+.header {
+    text-align: center;
+    margin-bottom: 4vh;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.welcome-text {
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    color: #3e2723;
+    margin-bottom: 1vh;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+}
+
+.subtitle {
+    font-size: clamp(1.3rem, 2.2vw, 1.8rem);
+    color: #5d4c41;
+    margin-bottom: 2vh;
+    font-weight: 300;
+    font-style: italic;
+}
+
+/* Logo Section */
+.logo-container {
+    margin: 2vh 0 3vh;
+    display: flex;
+    justify-content: center;
+}
+
+.logo {
+    max-width: min(350px, 45vw);
+    height: auto;
+    filter: drop-shadow(0 4px 12px rgba(62, 39, 35, 0.12));
+    transition: all 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.02);
+}
+
+.tagline {
+    font-size: clamp(1.1rem, 1.8vw, 1.4rem);
+    color: #5d4c41;
+    margin-top: 2vh;
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+/* Cards Section */
+.cards-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4vw;
+    width: 100%;
+    max-width: 1000px;
+    margin: 3vh 0;
+    align-items: stretch;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid rgba(62, 39, 35, 0.15);
+    border-radius: 12px;
+    padding: 3vh 2.5vw;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 16px rgba(62, 39, 35, 0.08);
+    display: grid;
+    grid-template-rows: auto auto 1fr auto;
+    align-items: center;
+    gap: 1.5vh;
+    height: 100%;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 24px rgba(62, 39, 35, 0.12);
+    border-color: rgba(62, 39, 35, 0.25);
+}
+
+.card-title {
+    font-size: clamp(1rem, 1.4vw, 1.15rem);
+    color: #795548;
+    margin: 0;
+    font-weight: 400;
+    letter-spacing: 0.3px;
+}
+
+.card-main {
+    font-size: clamp(1.5rem, 2.2vw, 1.9rem);
+    color: #3e2723;
+    margin: 0;
+    font-weight: 600;
+    letter-spacing: -0.3px;
+}
+
+.card-description {
+    font-size: clamp(0.95rem, 1.25vw, 1.08rem);
+    color: #5d4c41;
+    margin: 0;
+    line-height: 1.6;
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 1.5vh 3vw;
+    background: #3e2723;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: clamp(1rem, 1.3vw, 1.15rem);
+    transition: all 0.3s ease;
+    letter-spacing: 0.3px;
+    align-self: center;
+}
+
+.card-link:hover {
+    background: #5d4c41;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(62, 39, 35, 0.2);
+}
+
+.card-link:active {
+    transform: translateY(0);
+}
+
+.link-text {
+    font-size: inherit;
+}
+
+.arrow {
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+}
+
+.card-link:hover .arrow {
+    transform: translateX(5px);
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    margin-top: 3vh;
+    color: #795548;
+    font-size: clamp(0.9rem, 1.1vw, 1rem);
+    font-weight: 300;
+    opacity: 0.8;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+    body {
+        height: auto;
+        max-height: none;
+        overflow-y: auto;
+        padding: 4vh 6vw;
+        justify-content: flex-start;
+    }
+
+    .header {
+        margin-top: 2vh;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        padding: 3vh 5vw;
+    }
+
+    .header {
+        margin-bottom: 3vh;
+    }
+
+    .logo-container {
+        margin: 1.5vh 0 2vh;
+    }
+
+    .logo {
+        max-width: min(200px, 45vw);
+    }
+
+    .cards-section {
+        grid-template-columns: 1fr;
+        gap: 3vh;
+        margin: 2vh 0;
+    }
+
+    .card {
+        padding: 3.5vh 6vw;
+    }
+
+    .card-description {
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        padding: 2.5vh 5vw;
+    }
+
+    .logo {
+        max-width: min(180px, 50vw);
+    }
+
+    .cards-section {
+        gap: 2.5vh;
+    }
+
+    .card {
+        padding: 3vh 6vw;
+    }
+
+    .card-link {
+        padding: 1.3vh 8vw;
+    }
+}
