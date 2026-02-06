@@ -2,7 +2,7 @@
 function openEtsy(event) {
     event.preventDefault();
     // Substitua com o link real da loja Etsy
-    const etsyUrl = 'https://www.etsy.com/shop/YourShopName';
+    const etsyUrl = 'https://www.etsy.com/shop/DebStrainStudio?ref=search_shop_redirect';
     window.open(etsyUrl, '_blank');
     
     // Add click animation
