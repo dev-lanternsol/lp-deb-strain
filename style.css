@@ -16,16 +16,15 @@ body {
     background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    height: 100vh;
-    max-height: 100vh;
-    overflow: hidden;
+    min-height: 100vh;
+    overflow-y: auto;
     line-height: 1.6;
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 4vh 8vw;
+    padding: 2vh 8vw;
 }
 
 body::before {
@@ -41,7 +40,7 @@ body::before {
 
 /* Header Section */
 .header {
-    margin-top: 10vh;
+    margin-top: 2vh;
     text-align: center;
     width: 100%;
     max-width: 1000px;
@@ -65,7 +64,7 @@ body::before {
 
 /* Logo Section */
 .logo-container {
-    margin: 2vh 0 3vh;
+    margin: 1.5vh 0 2vh;
     display: flex;
     justify-content: center;
 }
@@ -96,7 +95,7 @@ body::before {
     gap: 4vw;
     width: 100%;
     max-width: 1000px;
-    margin: 2vh 0 0 0;
+    margin: 1.5vh 0 0 0;
     align-items: stretch;
 }
 
@@ -191,7 +190,8 @@ body::before {
 /* Footer */
 .footer {
     text-align: center;
-    margin-top: 3vh;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
     color: #795548;
     font-size: clamp(0.9rem, 1.1vw, 1rem);
     font-weight: 300;
