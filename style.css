@@ -41,7 +41,7 @@ body::before {
 
 /* Header Section */
 .header {
-    margin-top: 100px;
+    margin-top: 10vh;
     text-align: center;
     width: 100%;
     max-width: 1000px;
